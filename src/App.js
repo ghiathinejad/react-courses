@@ -1,13 +1,12 @@
-import React from "react";
-
 /*const App = () => {
     return React.createElement('div',{id:'hello',className:'hello-cls'},"hello");
 }*/
 
 const App = () => {
     return(
-        <div id="hello" className="hello-cls">
-            <h1>hell world</h1>
+        <div id="title" className="container">
+            <h1>Shopping app</h1>
+            <p>product #1 : book 1</p>
         </div>
     );
 }
