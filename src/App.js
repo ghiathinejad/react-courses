@@ -6,9 +6,12 @@ const App = () => {
     return(
         <div id="title" className="container">
             <h1>Shopping app</h1>
-            <Product />
-            <Product />
-            <Product />
+            <Product name="javascript" price="10$" />
+            <Product name="nodejs" price="20$" />
+            <Product name="reactjs" price="30$">
+                "discount is 12%"
+                <p>happy for you</p>
+            </Product>
         </div>
     );
 }
