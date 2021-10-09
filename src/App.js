@@ -1,12 +1,14 @@
 /*const App = () => {
     return React.createElement('div',{id:'hello',className:'hello-cls'},"hello");
 }*/
-
+import Product from "./components/Product/Product";
 const App = () => {
     return(
         <div id="title" className="container">
             <h1>Shopping app</h1>
-            <p>product #1 : book 1</p>
+            <Product />
+            <Product />
+            <Product />
         </div>
     );
 }
