@@ -2,6 +2,8 @@
     return React.createElement('div',{id:'hello',className:'hello-cls'},"hello");
 }*/
 import { useState } from "react";
+import ClassCount from "./components/ClassCount";
+import HookCount from "./components/HookCount";
 import Product from "./components/Product/Product";
 const App = () => {
     const [products,setProducts] = useState( [
@@ -27,6 +29,8 @@ const App = () => {
                 )
             }
             <button onClick={clickHandler}>change price</button>
+            <HookCount />
+            <ClassCount/>
         </div>
     );
 }
