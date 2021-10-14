@@ -4,6 +4,7 @@
 import { useState } from "react";
 import ClassCount from "./components/ClassCount";
 import HookCount from "./components/HookCount";
+import HookObject from "./components/HookObject";
 import Product from "./components/Product/Product";
 const App = () => {
     const [products,setProducts] = useState( [
@@ -31,6 +32,8 @@ const App = () => {
             <button onClick={clickHandler}>change price</button>
             <HookCount />
             <ClassCount/>
+
+            <HookObject/>
         </div>
     );
 }
