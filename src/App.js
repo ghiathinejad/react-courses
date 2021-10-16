@@ -25,11 +25,16 @@ const App = () => {
     return(
         <div id="title" className="container">
             <h1>Shopping app</h1>
-            {products.map((pro) => {
+{/*             {products.map((pro) => {
                     return(<Product key={pro.id} name={pro.title} price={pro.price} />)
                     }
                 )
-            }
+            } */}
+            {products.map((pro,index) => {
+                    return(<Product key={index} name={pro.title} price={pro.price} />)
+                    }
+                )
+            } 
             <button onClick={clickHandler}>change price</button>
             <HookCount />
             <hr/>
