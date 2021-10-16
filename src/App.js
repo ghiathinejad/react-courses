@@ -81,12 +81,16 @@ class App  extends Component {
         });
     }
 
-    constructor(props){
+/*     constructor(props){
         super(props);
         this.countHandler = this.countHandler.bind(this);
     }
     countHandler(){
         this.setState({count:this.state.count + 1});
+    } */
+
+    countHandler = (id) => {
+        this.setState({count:this.state.count + id});
     }
     render() { 
         return(
@@ -97,7 +101,10 @@ class App  extends Component {
                     }
                 )}
                 <button onClick={this.clickHandler}>change price</button>
-                <button onClick={this.countHandler} >count (learn this)</button>
+                {/* <button onClick={this.countHandler} >count (learn this)</button> */}
+                <button onClick={this.countHandler.bind(this,3)} >send argument to event +3 ({this.state.count})</button>
+                <button onClick={() => this.countHandler(2)} >send argument to event +2 ({this.state.count})</button>
+
             </div>
         );
     }
