@@ -7,6 +7,7 @@ import HookCount from "./components/HookCount";
 import HookObject from "./components/HookObject";
 import HookArray from "./components/Product/HookArray";
 import Product from "./components/Product/Product";
+import './App.css';
 const App = () => {
     const [products,setProducts] = useState( [
             {id:1 , title : 'javascript' , price : '10$'},
