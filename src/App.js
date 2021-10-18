@@ -69,12 +69,12 @@ class App  extends Component {
         ],
         count: 12
     };
-    clickHandler = () => {
+    clickHandler = (titlee) => {
         console.log('clicked');
         this.setState({
             products : [
                 {id:1 , title : 'javascript' , price : '11$'},
-                {id:2 , title : 'nodejs' , price : '22$'},
+                {id:2 , title : titlee , price : '22$'},
                 {id:3 , title : 'reactjs' , price : '33$'},
             ],
             count : 12
@@ -97,7 +97,7 @@ class App  extends Component {
             <div id="title" className="container">
                 <h1>Shopping app</h1>
                 {this.state.products.map((pro) => {
-                    return <Product key={pro.id} name={pro.title} price={pro.price} />;
+                    return <Product key={pro.id} name={pro.title} price={pro.price} click={() => this.clickHandler('new title')}  /* click={this.clickHandler.bind(this,'new title')}  *//>;
                     }
                 )}
                 <button onClick={this.clickHandler}>change price</button>
