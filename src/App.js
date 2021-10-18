@@ -1,11 +1,14 @@
-import { Component, Fragment } from "react";
+import { Component} from "react";
 import ProductList from "./components/ProductList/ProductList";
+import './App.css';
 
 class App extends Component{
     render() { 
-        return <Fragment>
-            <ProductList/>
-        </Fragment>;
+        return (
+            <div className="container">
+                <ProductList/>
+            </div>
+            );
     }
 }
  

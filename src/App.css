@@ -1,9 +1,14 @@
 .container{
     display: flex;
     justify-content: space-evenly;
-    width: 100%;
+    width: 600px;
     background-color: #fff;
     flex-direction: column;
     align-items: center;
     height: 90vh;
+    margin: 0 auto;
+}
+ul{
+    padding: 0px;
+    margin: 0px;
 }
