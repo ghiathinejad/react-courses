@@ -37,6 +37,17 @@ class ProductList extends Component {
         this.setState({products:products});
 
     }
+
+    changeTitleHandler = (e,ProductId) => {
+        const products = [...this.state.products];
+        const selecteProduct = products.find((pro) => {
+            return(
+                pro.id === ProductId
+            );
+        });
+        selecteProduct.title = e.target.value;
+        this.setState({products:products});
+    }
     render() { 
         return <ul>
             {this.state.products.map((pro) =>{
@@ -46,6 +57,7 @@ class ProductList extends Component {
                         product={pro}
                         onIcrement={() => this.incrementProductHandler(pro.id)}
                         onDelete={() => this.deleteProductHandler(pro.id)}
+                        onChangeTitle={(e) => this.changeTitleHandler(e,pro.id)}
                         />
                     )}
                  )}
