@@ -23,6 +23,10 @@
   color: green;
   margin: 0 2px;
 }
+.decrement {
+  color: red;
+  margin: 0 2px;
+}
 .quantity{
   background-color: bisque;
   border-radius: 50%;
