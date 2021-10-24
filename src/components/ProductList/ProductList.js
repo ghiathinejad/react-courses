@@ -95,8 +95,8 @@ class ProductList extends Component {
         
         return (
                 <div>
-                    {/* {this.state.products.length ? <div>your sabad</div> : <div>go shopping</div>} */}
-                    {this.state.products.length && <div>your sabad</div>}
+                    {/* {this.state.products.length ? <div>your cart</div> : <div>go shopping</div>} */}
+                    {this.state.products.length && <div>your cart</div>}
                     {this.renderProducts()}
                 </div>
         );
