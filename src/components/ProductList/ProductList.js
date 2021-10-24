@@ -68,12 +68,14 @@ class ProductList extends Component {
         }else{
             this.deleteProductHandler(ProductId);
         }
-
-        
-
     }
-    render() { 
-        return <ul>
+
+    renderProducts = () =>{
+        if(this.state.products.length === 0)
+            return (<div>no products</div>);
+
+        return(
+            <ul>
             {this.state.products.map((pro) =>{
                 return(
                      <Product 
@@ -86,7 +88,18 @@ class ProductList extends Component {
                         />
                     )}
                  )}
-        </ul>;
+            </ul>
+        );
+    } 
+    render() { 
+        
+        return (
+                <div>
+                    {/* {this.state.products.length ? <div>your sabad</div> : <div>go shopping</div>} */}
+                    {this.state.products.length && <div>your sabad</div>}
+                    {this.renderProducts()}
+                </div>
+        );
     }
 }
  
