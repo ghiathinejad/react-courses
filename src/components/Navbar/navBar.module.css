@@ -1,0 +1,16 @@
+.navBar {
+  width: 100%;
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+}
+.navBar h2{
+    font-size: 16px;
+}
+.navBar span{
+    width: 20px;
+    height: 20px;
+    border-radius: 5%;
+    background-color: cornsilk;
+    text-align: center;
+}
