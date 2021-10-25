@@ -1,8 +1,8 @@
 import navBarStyle from "./navBar.module.css";
-const NavBar = (props) => {
+const NavBar = ({totalItem}) => {
     return (<header className={navBarStyle.navBar}>
         <h2>ghiathinejad shopping</h2>
-        <span>({props.totalItem})</span>
+        <span>({totalItem})</span>
     </header>);
 }
  
