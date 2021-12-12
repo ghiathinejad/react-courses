@@ -25,7 +25,29 @@ class App extends Component{
         this.setState({products:ProductsFilter});
     }
     incrementProductHandler = (ProductId) => {
-        const products = [...this.state.products]
+        /*
+        * id
+        * index
+        * copy az on index
+        * */
+        const products = [...this.state.products];
+        const selectedItemIndex = products.findIndex(
+            (pro) => {
+                return (
+                    pro.id === ProductId
+                );
+            }
+        );
+        const productSelected = {...this.state.products[selectedItemIndex]};
+        productSelected.quantity++;
+
+        products[selectedItemIndex] = productSelected;
+
+        this.setState({products:products});
+
+/*
+     // روش غلط
+     const products = [...this.state.products]
         const selectedItem = products.find(
             (pro) => {
                 return (
@@ -33,12 +55,9 @@ class App extends Component{
                 );
             }
         );
-/*         console.log(this.state.products);
-        console.log(selectedItem);
- */
-        selectedItem.quantity++;
 
-        this.setState({products:products});
+        selectedItem.quantity++;
+        this.setState({products:products});*/
 
     }
 
@@ -54,24 +73,31 @@ class App extends Component{
     }
 
     decrementProductHandler = (ProductId) => {
-
-        const products = [...this.state.products]
-        const selectedItem = products.find(
+        const products = [...this.state.products];
+        const selectedItemIndex = products.findIndex(
             (pro) => {
                 return (
                     pro.id === ProductId
                 );
             }
         );
-/*         console.log(this.state.products);
-        console.log(selectedItem);
- */
-        if(selectedItem.quantity > 1){
-            selectedItem.quantity--;
+        const productSelected = {...this.state.products[selectedItemIndex]};
+
+
+
+        if(productSelected.quantity > 1){
+            productSelected.quantity--;
+
+            products[selectedItemIndex] = productSelected;
+
             this.setState({products:products});
         }else{
             this.deleteProductHandler(ProductId);
         }
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log(prevState.products);
     }
 
     render() { 
