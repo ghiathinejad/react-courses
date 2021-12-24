@@ -3,6 +3,10 @@ import productStyle from "./product.module.css";
 import {FaTrashAlt} from "react-icons/fa";
 
 class Product extends Component {
+    componentWillUnmount(){
+        console.log('componentWillUnmount product.js')
+
+    }
     render() { 
         return <Fragment>
             <li className={productStyle.product}>
