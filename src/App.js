@@ -1,7 +1,9 @@
 import { Component} from "react";
-import ProductList from "./components/ProductList/ProductList";
+//import ProductList from "./components/ProductList/ProductList";
 import './App.css';
-import NavBar from "./components/Navbar/NavBar";
+//import NavBar from "./components/Navbar/NavBar";
+//import ClassCounter from "./components/ClassCounter";
+import FunctionalCounter from "./components/FunctionalCounter";
 
 class App extends Component{
     state = {
@@ -103,7 +105,9 @@ class App extends Component{
     render() { 
         return (
             <div className="container">
-                <NavBar totalItem={this.state.products.length}/>
+                {/*<ClassCounter/>*/}
+                <FunctionalCounter/>
+{/*                <NavBar totalItem={this.state.products.length}/>
                 <ProductList
                     products={this.state.products}
                     onIncrement={this.incrementProductHandler}
@@ -111,7 +115,7 @@ class App extends Component{
                     onChangeTitle={this.changeTitleHandler}
                     onDecrement={this.decrementProductHandler}
                 
-                />
+                />*/}
             </div>
             );
     }
