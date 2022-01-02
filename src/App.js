@@ -1,9 +1,11 @@
 import { Component} from "react";
 //import ProductList from "./components/ProductList/ProductList";
-import './App.css';
+//import './App.css';
 //import NavBar from "./components/Navbar/NavBar";
 //import ClassCounter from "./components/ClassCounter";
-import FunctionalCounter from "./components/FunctionalCounter";
+//import FunctionalCounter from "./components/FunctionalCounter";
+//import ClassTimer from "./components/ClassTimer";
+import FunctionalTimer from "./components/FunctionalTimer";
 
 class App extends Component{
     state = {
@@ -13,7 +15,8 @@ class App extends Component{
             {id:3,title: "product #3" , price: "30$" , quantity : 3},
             {id:4,title: "product #4" , price: "40$" , quantity : 4},
             {id:5,title: "product #5" , price: "50$" , quantity : 5},
-        ]
+        ],
+        isShow : true
     }
 
 
@@ -106,7 +109,11 @@ class App extends Component{
         return (
             <div className="container">
                 {/*<ClassCounter/>*/}
-                <FunctionalCounter/>
+                {/*<FunctionalCounter/>*/}
+                <button onClick={()=>{this.setState({isShow : !this.state.isShow})}}>
+                    {this.state.isShow ? 'hide' : 'show'}
+                </button>
+                {this.state.isShow && <FunctionalTimer /> }
 {/*                <NavBar totalItem={this.state.products.length}/>
                 <ProductList
                     products={this.state.products}
