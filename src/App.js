@@ -1,11 +1,12 @@
 import { Component} from "react";
-//import ProductList from "./components/ProductList/ProductList";
-//import './App.css';
-//import NavBar from "./components/Navbar/NavBar";
+import ProductList from "./components/ProductList/ProductList";
+import './App.css';
+import NavBar from "./components/Navbar/NavBar";
+import Wrapper from "./components/hoc/Wrapper";
 //import ClassCounter from "./components/ClassCounter";
 //import FunctionalCounter from "./components/FunctionalCounter";
 //import ClassTimer from "./components/ClassTimer";
-import FunctionalTimer from "./components/FunctionalTimer";
+//import FunctionalTimer from "./components/FunctionalTimer";
 
 class App extends Component{
     state = {
@@ -107,14 +108,14 @@ class App extends Component{
 
     render() { 
         return (
-            <div className="container">
+            <Wrapper class="container">
                 {/*<ClassCounter/>*/}
                 {/*<FunctionalCounter/>*/}
-                <button onClick={()=>{this.setState({isShow : !this.state.isShow})}}>
-                    {this.state.isShow ? 'hide' : 'show'}
-                </button>
-                {this.state.isShow && <FunctionalTimer /> }
-{/*                <NavBar totalItem={this.state.products.length}/>
+                {/*<button onClick={()=>{this.setState({isShow : !this.state.isShow})}}>*/}
+                {/*    {this.state.isShow ? 'hide' : 'show'}*/}
+                {/*</button>*/}
+                {/*{this.state.isShow && <FunctionalTimer /> }*/}
+                <NavBar totalItem={this.state.products.length}/>
                 <ProductList
                     products={this.state.products}
                     onIncrement={this.incrementProductHandler}
@@ -122,8 +123,8 @@ class App extends Component{
                     onChangeTitle={this.changeTitleHandler}
                     onDecrement={this.decrementProductHandler}
                 
-                />*/}
-            </div>
+                />
+            </Wrapper>
             );
     }
 }
