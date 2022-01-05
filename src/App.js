@@ -106,9 +106,10 @@ class App extends Component{
         console.log(prevState.products);
     }
 
-    render() { 
+    render() {
+        console.log(this.props);
         return (
-            <Wrapper class="container">
+            <>
                 {/*<ClassCounter/>*/}
                 {/*<FunctionalCounter/>*/}
                 {/*<button onClick={()=>{this.setState({isShow : !this.state.isShow})}}>*/}
@@ -124,9 +125,9 @@ class App extends Component{
                     onDecrement={this.decrementProductHandler}
                 
                 />
-            </Wrapper>
+            </>
             );
     }
 }
  
-export default App;
+export default Wrapper(App,'container');
