@@ -3,6 +3,8 @@ import ProductList from "./components/ProductList/ProductList";
 import './App.css';
 import NavBar from "./components/Navbar/NavBar";
 import Wrapper from "./components/hoc/Wrapper";
+import CountClick from "./components/hocExample/CountClick";
+import CountHover from "./components/hocExample/CountHover";
 //import ClassCounter from "./components/ClassCounter";
 //import FunctionalCounter from "./components/FunctionalCounter";
 //import ClassTimer from "./components/ClassTimer";
@@ -116,7 +118,7 @@ class App extends Component{
                 {/*    {this.state.isShow ? 'hide' : 'show'}*/}
                 {/*</button>*/}
                 {/*{this.state.isShow && <FunctionalTimer /> }*/}
-                <NavBar totalItem={this.state.products.length}/>
+{/*                <NavBar totalItem={this.state.products.length}/>
                 <ProductList
                     products={this.state.products}
                     onIncrement={this.incrementProductHandler}
@@ -124,7 +126,11 @@ class App extends Component{
                     onChangeTitle={this.changeTitleHandler}
                     onDecrement={this.decrementProductHandler}
                 
-                />
+                />*/}
+
+                <CountClick name="maryam"/>
+                <CountHover />
+
             </>
             );
     }
