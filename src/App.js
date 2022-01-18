@@ -1,10 +1,11 @@
 import { Component} from "react";
-import ProductList from "./components/ProductList/ProductList";
+//import ProductList from "./components/ProductList/ProductList";
 import './App.css';
-import NavBar from "./components/Navbar/NavBar";
+//import NavBar from "./components/Navbar/NavBar";
 import Wrapper from "./components/hoc/Wrapper";
-import CountClick from "./components/hocExample/CountClick";
-import CountHover from "./components/hocExample/CountHover";
+//import CountClick from "./components/hocExample/CountClick";
+//import CountHover from "./components/hocExample/CountHover";
+import ParentCom from "./components/PureMemoCom/ParentCom";
 //import ClassCounter from "./components/ClassCounter";
 //import FunctionalCounter from "./components/FunctionalCounter";
 //import ClassTimer from "./components/ClassTimer";
@@ -128,8 +129,9 @@ class App extends Component{
                 
                 />*/}
 
-                <CountClick name="maryam"/>
-                <CountHover />
+                {/*<CountClick name="maryam"/>
+                <CountHover />*/}
+                <ParentCom/>
 
             </>
             );
