@@ -1,6 +1,7 @@
 import {Component} from 'react';
 import PureCom from "./PureCom";
 import RegCom from "./RegCom";
+import MemoCom from "./MemoCom";
 
 class ParentCom extends Component {
     state = {'name':'saheb'};
@@ -16,6 +17,7 @@ class ParentCom extends Component {
             <div>
                 <PureCom name={this.state.name}/>
                 <RegCom name={this.state.name}/>
+                <MemoCom />
             </div>
         );
     }
