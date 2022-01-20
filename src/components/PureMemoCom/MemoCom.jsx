@@ -2,7 +2,7 @@ import React from "react";
 function MemoCom() {
     console.log('memo com');
     return (
-        <div></div>
+        <div>memo</div>
     );
 }
 

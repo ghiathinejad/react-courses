@@ -6,6 +6,7 @@ import Wrapper from "./components/hoc/Wrapper";
 //import CountClick from "./components/hocExample/CountClick";
 //import CountHover from "./components/hocExample/CountHover";
 import ParentCom from "./components/PureMemoCom/ParentCom";
+import RefClass from "./components/ref/RefClass";
 //import ClassCounter from "./components/ClassCounter";
 //import FunctionalCounter from "./components/FunctionalCounter";
 //import ClassTimer from "./components/ClassTimer";
@@ -132,6 +133,7 @@ class App extends Component{
                 {/*<CountClick name="maryam"/>
                 <CountHover />*/}
                 <ParentCom/>
+                <RefClass />
 
             </>
             );
