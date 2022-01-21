@@ -2,8 +2,9 @@ import { Component} from "react";
 //import ProductList from "./components/ProductList/ProductList";
 import './App.css';
 //import NavBar from "./components/Navbar/NavBar";
-import Wrapper from "./components/hoc/Wrapper";
-import RefFunction from "./components/ref/RefFunction";
+//import Wrapper from "./components/hoc/Wrapper";
+import UseRefExample from "./components/ref/UseRefExample";
+//import RefFunction from "./components/ref/RefFunction";
 //import CountClick from "./components/hocExample/CountClick";
 //import CountHover from "./components/hocExample/CountHover";
 //import ParentCom from "./components/PureMemoCom/ParentCom";
@@ -135,10 +136,12 @@ class App extends Component{
                 <CountHover />*/}
 {/*                <ParentCom/>
                 <RefClass />*/}
-                <RefFunction />
+                {/*<RefFunction />*/}
+                <UseRefExample />
             </>
             );
     }
 }
  
-export default Wrapper(App,'container');
+export default App;
+//export default Wrapper(App,'container');
