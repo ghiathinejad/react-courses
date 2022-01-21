@@ -3,10 +3,11 @@ import { Component} from "react";
 import './App.css';
 //import NavBar from "./components/Navbar/NavBar";
 import Wrapper from "./components/hoc/Wrapper";
+import RefFunction from "./components/ref/RefFunction";
 //import CountClick from "./components/hocExample/CountClick";
 //import CountHover from "./components/hocExample/CountHover";
-import ParentCom from "./components/PureMemoCom/ParentCom";
-import RefClass from "./components/ref/RefClass";
+//import ParentCom from "./components/PureMemoCom/ParentCom";
+//import RefClass from "./components/ref/RefClass";
 //import ClassCounter from "./components/ClassCounter";
 //import FunctionalCounter from "./components/FunctionalCounter";
 //import ClassTimer from "./components/ClassTimer";
@@ -132,9 +133,9 @@ class App extends Component{
 
                 {/*<CountClick name="maryam"/>
                 <CountHover />*/}
-                <ParentCom/>
-                <RefClass />
-
+{/*                <ParentCom/>
+                <RefClass />*/}
+                <RefFunction />
             </>
             );
     }
