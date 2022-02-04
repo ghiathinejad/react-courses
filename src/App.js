@@ -1,9 +1,9 @@
-import { Component} from "react";
-//import ProductList from "./components/ProductList/ProductList";
+import React, {Component} from "react";
+import ProductList from "./components/ProductList/ProductList";
 import './App.css';
-//import NavBar from "./components/Navbar/NavBar";
+import NavBar from "./components/Navbar/NavBar";
 //import Wrapper from "./components/hoc/Wrapper";
-import UseRefExample from "./components/ref/UseRefExample";
+//import UseRefExample from "./components/ref/UseRefExample";
 //import RefFunction from "./components/ref/RefFunction";
 //import CountClick from "./components/hocExample/CountClick";
 //import CountHover from "./components/hocExample/CountHover";
@@ -13,7 +13,8 @@ import UseRefExample from "./components/ref/UseRefExample";
 //import FunctionalCounter from "./components/FunctionalCounter";
 //import ClassTimer from "./components/ClassTimer";
 //import FunctionalTimer from "./components/FunctionalTimer";
-
+export const UserInfoContext = React.createContext();
+export const SiteNameContext = React.createContext();
 class App extends Component{
     state = {
         products:[
@@ -116,6 +117,22 @@ class App extends Component{
         console.log(this.props);
         return (
             <>
+
+                <SiteNameContext.Provider value={"test.ir"}>
+                    <UserInfoContext.Provider value={"maryam"}>
+                        <NavBar totalItem={this.state.products.length}/>
+                        <ProductList
+                            products={this.state.products}
+                            onIncrement={this.incrementProductHandler}
+                            onDelete={this.deleteProductHandler}
+                            onChangeTitle={this.changeTitleHandler}
+                            onDecrement={this.decrementProductHandler}
+
+                        />
+
+                    </UserInfoContext.Provider>
+                </SiteNameContext.Provider>
+
                 {/*<ClassCounter/>*/}
                 {/*<FunctionalCounter/>*/}
                 {/*<button onClick={()=>{this.setState({isShow : !this.state.isShow})}}>*/}
@@ -137,7 +154,7 @@ class App extends Component{
 {/*                <ParentCom/>
                 <RefClass />*/}
                 {/*<RefFunction />*/}
-                <UseRefExample />
+                {/*<UseRefExample />*/}
             </>
             );
     }

@@ -1,6 +1,11 @@
 import navBarStyle from "./navBar.module.css";
-import {useEffect} from "react";
+import {useEffect ,useContext} from "react";
+import {SiteNameContext, UserInfoContext} from "../../App";
 const NavBar = ({totalItem}) => {
+
+    const UserInfo = useContext(UserInfoContext);
+    const SiteInfo = useContext(SiteNameContext);
+
     // cdm + cdu + cwum => useEffect
 
     //cdm
@@ -24,8 +29,12 @@ const NavBar = ({totalItem}) => {
 
 
     return (<header className={navBarStyle.navBar}>
+        <p>{UserInfo}</p>
+        <br/>
         <h2>ghiathinejad shopping</h2>
         <span>({totalItem})</span>
+        <br/>
+        <p>{SiteInfo}</p>
     </header>);
 }
  
