@@ -1,7 +1,9 @@
 import React, {Component} from "react";
-import ProductList from "./components/ProductList/ProductList";
+// import ProductList from "./components/ProductList/ProductList";
 import './App.css';
-import NavBar from "./components/Navbar/NavBar";
+import CounterProvider from "./components/Context/CounterProvider";
+import CountOne from "./components/Context/CountOne";
+// import NavBar from "./components/Navbar/NavBar";
 //import Wrapper from "./components/hoc/Wrapper";
 //import UseRefExample from "./components/ref/UseRefExample";
 //import RefFunction from "./components/ref/RefFunction";
@@ -13,8 +15,8 @@ import NavBar from "./components/Navbar/NavBar";
 //import FunctionalCounter from "./components/FunctionalCounter";
 //import ClassTimer from "./components/ClassTimer";
 //import FunctionalTimer from "./components/FunctionalTimer";
-export const UserInfoContext = React.createContext();
-export const SiteNameContext = React.createContext();
+/*export const UserInfoContext = React.createContext();
+export const SiteNameContext = React.createContext();*/
 class App extends Component{
     state = {
         products:[
@@ -117,8 +119,12 @@ class App extends Component{
         console.log(this.props);
         return (
             <>
+            <CounterProvider>
+                <CountOne />
+            </CounterProvider>
 
-                <SiteNameContext.Provider value={"test.ir"}>
+
+{/*                <SiteNameContext.Provider value={"test.ir"}>
                     <UserInfoContext.Provider value={"maryam"}>
                         <NavBar totalItem={this.state.products.length}/>
                         <ProductList
@@ -131,7 +137,7 @@ class App extends Component{
                         />
 
                     </UserInfoContext.Provider>
-                </SiteNameContext.Provider>
+                </SiteNameContext.Provider>*/}
 
                 {/*<ClassCounter/>*/}
                 {/*<FunctionalCounter/>*/}
