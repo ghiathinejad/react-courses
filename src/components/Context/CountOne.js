@@ -3,7 +3,7 @@ import {CountContext, CountDispacherContext} from "./CounterProvider";
 
 function CountOne() {
     const count = useContext(CountContext);
-    const setCount = useContext(CountDispacherContext);
+    const setCount =useContext(CountDispacherContext);
     return (
         <div>
             <h1>count : {count}</h1>
